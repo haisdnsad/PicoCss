@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@400;700&display=swap');
+
+:root{
+    --fundo-principal: #8D93A9;
+    --fundo-secundario: #999DB4;
+    --baloes: #C7CCDD;
+    --titulos: #FFFFFF;
+    --texto: #000000;
+}
+*{
+    padding: 0%;
+    margin: 0;
+}
+h1, h2, h3, h4, h5, h6, strong{
+    color: var(--titulos);
+    font-family: "Inria Serif", serif;
+    font-weight: 700;
+    text-align: center;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: #828CA9;
+    text-shadow: 1px 0px 1px #00000033;
+    margin-bottom: 14px;
+}
+h1, h2, strong{
+    text-shadow: 0px 0px 2px black;
+}
+p, li{
+    font-family: "Inria Serif", serif;
+    font-weight: 400;
+    color: var(--texto);
+    line-height: 1.6em;
+    text-align: justify;
+    font-size: 1.1em;
+}   
+body{
+    background-color: var(--fundo-principal);
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template: repeat(2, auto) / minmax(5%, auto) minmax(20px, 1259px) minmax(5%, auto);
+}
+header{ 
+    background-color: var(--fundo-secundario);
+    position: relative;
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+header #logo{
+    width: 100%;
+}
+header #home{
+    height: 50px;
+    position: absolute;
+    transform: translateX(-50%);
+    z-index: 1;
+    top: 20px;
+    left: 0;
+}
+
+main{
+    grid-area: 2 / 2 / span 1/ span 1;
+    background-color: var(--fundo-secundario);
+    border-radius: 0px 0px 40px 40px;
+    margin-bottom: 20px;
+}
+main h1{
+    font-size: 6em;
+}
+main .balao{
+    background-color: var(--baloes);
+    border-radius: 20px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 16px;
+    box-shadow: 1px 1px 9px #00000024;
+}
+main .balao h4, .balao h5{
+    font-size: 1.4em;
+}
+.balao p{
+    
+}
+main h3{
+    font-size: 2em;
+}
+main h2{
+    font-size: 2.3em;
+}
+main #garantia ul{
+    list-style-position: inside;
+}
+main #garantia li{
+        margin: 10px 0px;
+}
+main #funcionalidade .codigo{
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+}
+
+main #feedback{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+main #feedback .balao{
+    width: 40%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+main #feedback .user{
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fundo-principal);
+    border-radius: 40px;
+}
+main #feedback .user img{
+    height: 33px;
+}
+main #feedback .user strong{
+    margin: 0 10px;
+    font-size: 1.1em;
+}
+main #feedback .comment > p{
+    margin: 10px 0px 0px 0px;
+    font-family: "Inria Serif", serif;
+    font-weight: 700;
+}
